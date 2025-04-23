@@ -1,0 +1,462 @@
+/* StudentDashboard.css - Modern and Visually Attractive Redesign */
+
+:root {
+  --primary-color: #000000;
+  --primary-dark: #3a7dca;
+  --success-color: #34c759;
+  --warning-color: #ff9500;
+  --danger-color: #ff3b30;
+  --info-color: #5ac8fa;
+  --light-bg: #f8f9fa;
+  --dark-text: #333333;
+  --medium-text: #666666;
+  --light-text: #888888;
+  --border-radius: 12px;
+  --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 100%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  margin-right: 24px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.title {
+  font-size: 22px;
+  color: var(--dark-text);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Dashboard styling */
+.dashboard {
+  position: relative;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edfb 100%);
+  border-radius: var(--border-radius);
+  padding: 32px;
+  margin-bottom: 40px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.decorator {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.decorator-1 {
+  width: 200px;
+  height: 200px;
+  background: var(--primary-color);
+  top: -50px;
+  right: -50px;
+}
+
+.decorator-2 {
+  width: 120px;
+  height: 120px;
+  background: var(--success-color);
+  bottom: -30px;
+  left: 10%;
+}
+
+.decorator-3 {
+  width: 80px;
+  height: 80px;
+  background: var(--warning-color);
+  top: 20px;
+  left: 20%;
+}
+
+.dashboard-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+}
+
+.dashboard-title-badge {
+  background-color: rgba(74, 144, 226, 0.1);
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 24px;
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--medium-text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-applications .stat-value {
+  color: var(--primary-color);
+}
+
+.stat-interviews .stat-value {
+  color: var(--info-color);
+}
+
+.stat-offers .stat-value {
+  color: var(--success-color);
+}
+
+.stat-deadlines .stat-value {
+  color: var(--warning-color);
+}
+
+/* Content area */
+.content {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 32px;
+  box-shadow: var(--box-shadow);
+  max-width: 100%; /* Match the dashboard width */
+  margin-bottom: 40px; /* Add some spacing at the bottom */
+}
+
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.button-secondary {
+  background-color: #f1f1f1;
+  color: var(--dark-text);
+}
+
+.button-secondary:hover {
+  background-color: #e3e3e3;
+}
+
+.button-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.button-success:hover {
+  background-color: #2db14a;
+}
+
+/* Form styling */
+.form-container {
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--dark-text);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  color: var(--medium-text);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-control {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.form-buttons {
+  grid-column: span 3;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* Kanban board styling */
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  width: 100%; /* Ensure it uses full width */
+}
+
+.kanban-column {
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  min-height: 400px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%; /* Ensure columns take full width */
+}
+
+.column-heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  background-color: var(--light-bg);
+  z-index: 2;
+}
+
+.column-applied .column-heading {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.column-shortlisted .column-heading {
+  color: var(--info-color);
+  border-color: var(--info-color);
+}
+
+.column-interviews .column-heading {
+  color: var(--warning-color);
+  border-color: var(--warning-color);
+}
+
+.column-offers .column-heading {
+  color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.column-rejected .column-heading {
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.app-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  cursor: grab;
+  transition: var(--transition);
+  position: relative;
+  border-left: 4px solid transparent;
+}
+
+.app-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.column-applied .app-card {
+  border-left-color: var(--primary-color);
+}
+
+.column-shortlisted .app-card {
+  border-left-color: var(--info-color);
+}
+
+.column-interviews .app-card {
+  border-left-color: var(--warning-color);
+}
+
+.column-offers .app-card {
+  border-left-color: var(--success-color);
+}
+
+.column-rejected .app-card {
+  border-left-color: var(--danger-color);
+}
+
+.app-company {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: var(--dark-text);
+}
+
+.app-position {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  color: var(--medium-text);
+}
+
+.app-deadline {
+  font-size: 12px;
+  color: var(--light-text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.app-deadline::before {
+  content: "⏰";
+  margin-right: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .kanban-board {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .form-buttons {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  
+  .tracker-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .kanban-board {
+    grid-template-columns: 1fr;
+    overflow-x: visible;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-buttons {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
